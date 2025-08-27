@@ -30,14 +30,14 @@ suite('Unit Tests', function () {
 
   // -----------------------------------------------------------------------------
 
-  // suite('Equality', function () {
-  //   // #5
-  //   test('#equal, #notEqual', function () {
-  //     assert.fail(12, '12', 'Numbers are coerced into strings with ==');
-  //     assert.fail({ value: 1 }, { value: 1 }, '== compares object references');
-  //     assert.fail(6 * '2', '12');
-  //     assert.fail(6 + '2', '12');
-  //   });
+  suite('Equality', function () {
+    // #5
+    test('#equal, #notEqual', function () {
+      assert.equal(12, '12', 'Numbers are coerced into strings with ==');
+      assert.equal({ value: 1 }, { value: 1 }, '== compares object references');
+      assert.notEqual(6 * '2', '12');
+      assert.notEqual(6 + '2', '12');
+    });
   //   // #6
   //   test('#strictEqual, #notStrictEqual', function () {
   //     assert.fail(6, '6');
@@ -50,7 +50,7 @@ suite('Unit Tests', function () {
   //     assert.fail({ a: '1', b: 5 }, { b: 5, a: '1' }, "The order of keys doesn't matter");
   //     assert.fail({ a: [5, 6] }, { a: [6, 5] }, 'The order of array elements does matter');
   //   });
-  // });
+  });
 
   // // -----------------------------------------------------------------------------
 
