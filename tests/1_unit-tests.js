@@ -52,7 +52,7 @@ suite('Unit Tests', function () {
     });
   });
 
-  // // -----------------------------------------------------------------------------
+  // -----------------------------------------------------------------------------
 
   function weirdNumbers(delta) {
     return 1 + delta - Math.random();
@@ -80,7 +80,7 @@ suite('Unit Tests', function () {
     });
   });
 
-  // // -----------------------------------------------------------------------------
+  // -----------------------------------------------------------------------------
 
   const winterMonths = ['dec,', 'jan', 'feb', 'mar'];
   const backendLanguages = ['php', 'python', 'javascript', 'ruby', 'asp'];
@@ -97,7 +97,7 @@ suite('Unit Tests', function () {
     });
   });
 
-  // // -----------------------------------------------------------------------------
+  // -----------------------------------------------------------------------------
 
   const formatPeople = function (name, age) {
     return '# name: ' + name + ', age: ' + age + '\n';
@@ -114,15 +114,15 @@ suite('Unit Tests', function () {
       assert.include('Arrow', 'row', "'Arrow' contains 'row'");
       assert.notInclude('dart', 'queue', "But 'dart' doesn't contain 'queue'");
     });
-  //   // #15
-  //   test('#match, #notMatch', function () {
-  //     const regex = /^#\sname\:\s[\w\s]+,\sage\:\s\d+\s?$/;
-  //     assert.fail(formatPeople('John Doe', 35), regex);
-  //     assert.fail(formatPeople('Paul Smith III', 'twenty-four'), regex);
-  //   });
+    // #15
+    test('#match, #notMatch', function () {
+      const regex = /^#\sname\:\s[\w\s]+,\sage\:\s\d+\s?$/;
+      assert.notMatch(formatPeople('John Doe', 35), regex);
+      assert.match(formatPeople('Paul Smith III', 'twenty-four'), regex);
+    });
   });
 
-  // // -----------------------------------------------------------------------------
+  // -----------------------------------------------------------------------------
 
   // const Car = function () {
   //   this.model = 'sedan';
